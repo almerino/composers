@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from "react-apollo"
 import gql from "graphql-tag"
 import { withRouter } from 'react-router-dom'
@@ -83,6 +84,28 @@ class Article extends Component {
       </div >
     )
   }
+}
+
+Article.PropTypes = {
+  data: PropTypes.shape({
+    loading: PropTypes.bool.isRequired,
+    article: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      genre: PropTypes.string.isRequired,
+      bio: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        birth: PropTypes.instanceOf(Date).isRequired,
+        place: PropTypes.string.isRequired,
+      }),
+      compositions: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        year: PropTypes.number.isRequired,
+      })),
+    }),
+  }).isRequired,
 }
 
 export const articleQuery = gql`

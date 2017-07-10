@@ -1,13 +1,14 @@
 import React from 'react'
-import { graphql } from "react-apollo"
-import gql from "graphql-tag"
+import PropTypes from 'prop-types'
+import { graphql } from 'react-apollo'
+import gql from 'graphql-tag'
 import { Link } from 'react-router-dom'
 import { LinearProgress } from 'material-ui/Progress'
 import Paper from 'material-ui/Paper'
 import List, { ListItem, ListItemText } from 'material-ui/List'
 import Avatar from 'material-ui/Avatar'
 import Typography from 'material-ui/Typography'
-import "./Composers.css"
+import './Composers.css'
 
 function Composers({ data }) {
   if (data.loading) {
@@ -37,6 +38,17 @@ function Composers({ data }) {
       </Paper>
     </div>
   )
+}
+
+Composers.PropTypes = {
+  data: PropTypes.shape({
+    loading: PropTypes.bool.isRequired,
+    composers: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+    })),
+  }).isRequired,
 }
 
 export const composersQuery = gql`
