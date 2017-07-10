@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "react-router-dom": "^4.1.1"
   },
   "scripts": {
     "start": "REACT_APP_GRAPHQL_ENDPOINT=${REACT_APP_GRAPHQL_ENDPOINT:=https://api.graph.cool/simple/v1/cj4y1qjom0q930196vdchtyc6} react-scripts start",
@@ -15,8 +16,8 @@
   },
   "devDependencies": {
     "apollo-client": "^1.7.0",
+    "material-ui": "next",
     "react-apollo": "^1.4.3",
     "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1"
   }
 }
