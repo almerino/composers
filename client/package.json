@@ -8,9 +8,15 @@
     "react-scripts": "1.0.10"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "REACT_APP_GRAPHQL_ENDPOINT=${REACT_APP_GRAPHQL_ENDPOINT:=https://api.graph.cool/simple/v1/cj4y1qjom0q930196vdchtyc6} react-scripts start",
+    "build": "REACT_APP_GRAPHQL_ENDPOINT=${REACT_APP_GRAPHQL_ENDPOINT:=https://api.graph.cool/simple/v1/cj4y1qjom0q930196vdchtyc6} react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "apollo-client": "^1.7.0",
+    "react-apollo": "^1.4.3",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1"
   }
 }
