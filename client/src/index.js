@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ApolloProvider } from 'react-apollo'
 import ApolloClient, { createNetworkInterface } from 'apollo-client'
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import App from './App/App'
+import registerServiceWorker from './registerServiceWorker'
+import './index.css'
 
 const networkInterface = createNetworkInterface({ uri: process.env.REACT_APP_GRAPHQL_ENDPOINT })
 
@@ -19,4 +19,4 @@ ReactDOM.render(
   </ApolloProvider>,
   document.getElementById('root')
 )
-registerServiceWorker();
+registerServiceWorker()
