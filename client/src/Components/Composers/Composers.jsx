@@ -39,7 +39,7 @@ function Composers({ data }) {
   )
 }
 
-const composersQuery = gql`
+export const composersQuery = gql`
   query {
     composers: allComposers {
       id
@@ -48,5 +48,7 @@ const composersQuery = gql`
     }
   }
 `
+
+export const SimpleComposers = Composers
 
 export default graphql(composersQuery)(Composers)

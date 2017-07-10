@@ -1,5 +1,5 @@
 import React from 'react'
-import { mount, shallow } from 'enzyme'
+import { shallow } from 'enzyme'
 import { MockedProvider } from 'react-apollo/lib/test-utils'
 import Article, { articleQuery, SimpleArticle } from './Article'
 
@@ -25,7 +25,7 @@ const props = {
         name: 'Pierre et le loup',
         year: '2002',
       }, {
-        id: '1',
+        id: '2',
         name: 'Pierre et le loup',
         year: '2002',
       }],
