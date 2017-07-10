@@ -1,12 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
+import AppBar from '../Components/AppBar/AppBar'
 import AllRoutes from './Routes/AllRoutes'
-import logo from './logo.svg'
 import './App.css'
 
 function App() {
   return (
     <div>
-      <AllRoutes />
+      <AppBar />
+      <div className="app">
+        <AllRoutes />
+      </div>
     </div>
   )
 }
