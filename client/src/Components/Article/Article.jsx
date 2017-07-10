@@ -85,7 +85,7 @@ class Article extends Component {
   }
 }
 
-const articleQuery = gql`
+export const articleQuery = gql`
   query article($id: ID!) {
     article: Composer(id: $id) {
       id
@@ -105,6 +105,7 @@ const articleQuery = gql`
     }
   }
 `
+export const SimpleArticle = Article
 
 export default graphql(articleQuery, {
   options: ({ match: { params: { id } } }) => ({ variables: { id } })

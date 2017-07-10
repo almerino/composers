@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   return (
     <div>
-      <AppBar />
+      <AppBar className="app-bar" />
       <div className="app">
         <AllRoutes />
       </div>

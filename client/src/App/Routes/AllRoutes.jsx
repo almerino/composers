@@ -6,7 +6,7 @@ function NoMatch() {
   return <Redirect to={{ pathname: '/' }} />
 }
 
-function Routes() {
+function AllRoutes() {
   return (
     <Switch>
       {routes.map((route, i) => <Route {...route} key={i} exact />)}
@@ -15,4 +15,4 @@ function Routes() {
   )
 }
 
-export default Routes
+export default AllRoutes

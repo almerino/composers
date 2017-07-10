@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "apollo-client": "^1.7.0",
+    "enzyme": "^2.9.1",
     "material-ui": "next",
     "material-ui-icons": "^1.0.0-alpha.19",
     "react": "^15.6.1",
@@ -11,7 +12,8 @@
     "react-dom": "^15.6.1",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "react-test-renderer": "^15.6.1"
   },
   "scripts": {
     "start": "REACT_APP_GRAPHQL_ENDPOINT=${REACT_APP_GRAPHQL_ENDPOINT:=https://api.graph.cool/simple/v1/cj4y1qjom0q930196vdchtyc6} react-scripts start",

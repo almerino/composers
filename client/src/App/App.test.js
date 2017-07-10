@@ -1,8 +1,10 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { shallow } from 'enzyme'
 import App from './App'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div')
-  ReactDOM.render(<App />, div)
+it('renders App', () => {
+  const wrapper = shallow(<App />)
+  expect(wrapper.find('.app')).toHaveLength(1)
+  expect(wrapper.find('LinkAppBar')).toHaveLength(1)
+  expect(wrapper.find('AllRoutes')).toHaveLength(1)
 })
